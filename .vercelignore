@@ -1,0 +1,9 @@
+# Ignore local dev files — not needed on Vercel
+run.py
+test_app.py
+*.pyc
+__pycache__/
+.env
+.env.*
+*.log
+
