@@ -3,6 +3,7 @@ FarmBot AI Application Launcher
 Run with: python run.py
 """
 
+import os
 import sys
 import uvicorn
 
@@ -14,8 +15,10 @@ if sys.platform == "win32":
         pass
 
 if __name__ == "__main__":
-    print("Starting FarmBot AI - All-in-One AI Farming Assistant...")
-    print("Access the web application at: http://localhost:8000")
-    print("API Documentation at: http://localhost:8000/docs")
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.environ.get("PORT", 8000))
+    print(f"Starting FarmBot AI - All-in-One AI Farming Assistant on port {port}...")
+    print(f"Access the web application at: http://localhost:{port}")
+    print(f"API Documentation at: http://localhost:{port}/docs")
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port, reload=False)
+
 
