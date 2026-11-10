@@ -1,6 +1,6 @@
 [tool.vercel.python]
-entrypoint = "app.main:app"
+entrypoint = "main:app"
 version = "3.10"
 
 [tool.vercel]
-entrypoint = "app.main:app"
+entrypoint = "main:app"
