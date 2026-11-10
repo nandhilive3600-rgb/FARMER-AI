@@ -1,0 +1,5 @@
+[tool.vercel]
+entrypoint = "api/index.py"
+
+[tool.vercel.python]
+version = "3.10"
